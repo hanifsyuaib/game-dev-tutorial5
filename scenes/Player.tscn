@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://8erwrhthq2gs"]
+
+[ext_resource type="Script" path="res://scenes/Player.gd" id="1_u73qd"]
+[ext_resource type="Texture2D" uid="uid://bpc6e5ojqehlc" path="res://assets/kenney_platformercharacters/PNG/Zombie/Poses/zombie_stand.png" id="2_oog5p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6gup"]
+size = Vector2(65, 95)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_u73qd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_oog5p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 11.5)
+shape = SubResource("RectangleShape2D_h6gup")
