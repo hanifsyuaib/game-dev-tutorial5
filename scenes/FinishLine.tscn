@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://cy3yg7cwkbm42"]
+
+[ext_resource type="Texture2D" uid="uid://efim7fkmj37k" path="res://assets/kenney_platformercharacters/Vector/female_vector.svg" id="1_14waa"]
+[ext_resource type="Script" path="res://scenes/FinishLine.gd" id="1_p5kaf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ik1r1"]
+size = Vector2(76, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjt0a"]
+atlas = ExtResource("1_14waa")
+region = Rect2(0, 0, 80, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5afp"]
+atlas = ExtResource("1_14waa")
+region = Rect2(240, 0, 80, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgipc"]
+atlas = ExtResource("1_14waa")
+region = Rect2(640, 0, 80, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_faqgv"]
+atlas = ExtResource("1_14waa")
+region = Rect2(320, 0, 80, 110)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nkdw7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjt0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5afp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgipc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_faqgv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FinishLine" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_p5kaf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 10)
+shape = SubResource("RectangleShape2D_ik1r1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nkdw7")
+frame = 2
+frame_progress = 0.613487
+
+[connection signal="body_entered" from="." to="." method="_on_FinishLine_body_entered"]

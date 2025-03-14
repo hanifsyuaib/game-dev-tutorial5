@@ -1,21 +1,69 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsyfep1odrxje"]
+[gd_scene load_steps=12 format=3 uid="uid://dsyfep1odrxje"]
 
 [ext_resource type="PackedScene" uid="uid://yxh0p4ncb285" path="res://scenes/Ground.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/BackgroundAudio.gd" id="1_1b366"]
 [ext_resource type="PackedScene" uid="uid://8erwrhthq2gs" path="res://scenes/Player.tscn" id="1_pb6ju"]
+[ext_resource type="PackedScene" uid="uid://curuwoosnxtag" path="res://scenes/Player2.tscn" id="2_j8hgo"]
+[ext_resource type="AudioStream" uid="uid://dhq1c81t85x2f" path="res://assets/tutorial5/spaceEngine_002.ogg" id="3_uelfi"]
+[ext_resource type="AudioStream" uid="uid://b7x5ngm3dnwb" path="res://assets/tutorial5/forceField_000.ogg" id="4_m44ra"]
+[ext_resource type="PackedScene" uid="uid://nyq7rpkbayku" path="res://scenes/Enemies.tscn" id="5_xhwol"]
+[ext_resource type="PackedScene" uid="uid://b2xldmr3mt3uc" path="res://scenes/Enemies2.tscn" id="6_a53ay"]
+[ext_resource type="PackedScene" uid="uid://cbvacql0jd42m" path="res://scenes/Enemies3.tscn" id="7_cxb1l"]
+[ext_resource type="PackedScene" uid="uid://b40ax3gdpwfku" path="res://scenes/Enemies4.tscn" id="8_g4lqx"]
+[ext_resource type="PackedScene" uid="uid://cy3yg7cwkbm42" path="res://scenes/FinishLine.tscn" id="9_r7hxn"]
 
 [node name="Root" type="Node2D"]
+script = ExtResource("1_1b366")
 
 [node name="Player" parent="." instance=ExtResource("1_pb6ju")]
+visible = false
 position = Vector2(1097, 44)
 
+[node name="Player2" parent="." instance=ExtResource("2_j8hgo")]
+position = Vector2(1065, 44)
+
+[node name="BackgroundAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_uelfi")
+
+[node name="StartAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_m44ra")
+autoplay = true
+
 [node name="Ground" parent="." instance=ExtResource("1")]
-position = Vector2(567.758, 554.806)
+position = Vector2(624, 149)
 
 [node name="Ground2" parent="." instance=ExtResource("1")]
-position = Vector2(849.199, 485)
+position = Vector2(537, 401)
 
 [node name="Ground3" parent="." instance=ExtResource("1")]
-position = Vector2(286, 485.508)
+position = Vector2(273, 149)
 
 [node name="Ground4" parent="." instance=ExtResource("1")]
 position = Vector2(971, 149)
+
+[node name="Ground5" parent="." instance=ExtResource("1")]
+position = Vector2(185, 401)
+
+[node name="Ground6" parent="." instance=ExtResource("1")]
+position = Vector2(976, 396)
+
+[node name="Ground7" parent="." instance=ExtResource("1")]
+position = Vector2(774, 590)
+
+[node name="Ground8" parent="." instance=ExtResource("1")]
+position = Vector2(426, 590)
+
+[node name="Enemies" parent="." instance=ExtResource("5_xhwol")]
+position = Vector2(405, 49)
+
+[node name="Enemies2" parent="." instance=ExtResource("6_a53ay")]
+position = Vector2(257, 299)
+
+[node name="Enemies3" parent="." instance=ExtResource("7_cxb1l")]
+position = Vector2(977, 295)
+
+[node name="Enemies4" parent="." instance=ExtResource("8_g4lqx")]
+position = Vector2(599, 492)
+
+[node name="FinishLine" parent="." instance=ExtResource("9_r7hxn")]
+position = Vector2(304, 500)

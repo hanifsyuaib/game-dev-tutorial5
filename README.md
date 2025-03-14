@@ -1,3 +1,31 @@
+# Tutorial 5 - Assets Creation & Integration
+
+## Penjelasan Proses Pengerjaan Dalam Membuat dan Menambah Variasi Aset
+
+### 1. Objek Baru
+Objek baru di dalam permainan yang dilengkapi dengan animasi menggunakan spritesheet selain yang disediakan di tutorial adalah Robot. Robot merupakan assets yang berasal dari Toon Characters 1 yang didapatkan di Kenney. Berikut link menuju assets: https://kenney.nl/assets/toon-characters-1
+
+### 2. Audio untuk Efek Suara (SFX)
+Efek suara di dalam permainan selain yang disediakan di tutorial adalah explosionCrunch_001.ogg. explosionCrunch_001.ogg merupakan assets yang berasal dari Sci-fi Sounds yang didapatkan di Kenney. Berikut link menuju assets: https://kenney.nl/assets/sci-fi-sounds
+
+### 3. Audio untuk Musik Latar (Background Music)
+Musik latar di dalam permainan selain yang disediakan di tutorial adalah forceField_000.ogg dan spaceEngine_002.ogg. Kedua musik latar tersebut merupakan assets yang berasal dari Sci-fi Sounds yang didapatkan di Kenney. Berikut link menuju assets: https://kenney.nl/assets/sci-fi-sounds
+
+### 4. Interaksi antara Objek Baru dan Pemain
+Interaksi yang dapat dilakukan adalah pemain dapat menghilangkan objek baru tersebut ketika tabrakan dengan objek baru di dunia permainan. Terdapat 4 buah objek baru yang dapat pemain temukan dan masing-masing objek baru tersebut memiliki animasi yang berbeda. Pemain memiliki tujuan untuk menyelamatkan adik perempuannya dengan cara berhadapan dengan 4 objek baru terlebih dahulu.
+
+### 5. Audio Feedback dari Interaksi antara Objek Baru dan Pemain
+Setiap pemain berinteraksi dengan objek baru, objek baru akan terdorong dan muncul efek suara atau audio feedback (explosionCrunch_001.ogg) berupa suara ledakan sebelum objek baru menghilang.
+
+### 6. Sistem Audio yang relatif terhadap Posisi Pemain
+Musik latar akan diawali dengan audio forceField_000.ogg yang menandakan permainan baru saja dimulai dan posisi pemain masih belum jauh dari posisi awal. Kemudian, ketika pemain semakin jauh dari posisi awal akan ditandai dengan berubahnya musik latar yaitu spaceEngine_002.ogg. Ketika pemain berhasil sampai di posisi adik perempuannya berada, maka permainan akan berakhir dan memunculkan scene serta musik latar yang berisi ucapan selamat atas menyelesaikan permainan.
+ 
+<br><br>
+
+---
+
+<br><br>
+  
 # Tutorial 3 - Introduction to Game Programming
 
 ## Penjelasan Proses Pengerjaan Fitur Lanjutan
